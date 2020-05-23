@@ -1,0 +1,247 @@
+/* CSS Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Micro Clearfix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+/* CSS Main*/
+
+html, body {
+    background-color: #1f2630;
+    margin: 10px;
+}
+
+.header h3 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.header h5 {
+    font-size: 20px;
+    text-align: center;
+    color : whitesmoke;
+}
+
+.header h6 {
+    font-size: 15px;
+    text-align: center;
+    color: turquoise;
+}
+
+.left-side {
+    background-color: #21365c;
+    width: 47%;
+    height: auto;
+    margin-top:20px;
+    padding-right: 37px;
+    padding: 15px;
+    float: left;
+    border-radius: 5px;
+}
+
+.kasus {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: whitesmoke;
+    margin-bottom: 3px;
+}
+
+.label {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    color: whitesmoke;
+    margin-bottom: 5px;
+}
+
+.left-container {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.left-container > div {
+    padding: 10px;
+    margin-right: 5px;
+    flex: 1;
+    border-radius: 5px;
+}
+
+.left-container > div > h5 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.left-container > div > h3 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+.left-container > div:nth-child(1){
+    background-color: #2B37B0;
+}
+
+.left-container > div:nth-child(2){
+    background-color: #FF2520;
+}
+
+.left-container > div:nth-child(3){
+    background-color: #17B65C;
+}
+
+.left-container > div:nth-child(4){
+    background-color: #cecb30;
+}
+
+#ts-indo {
+    width:auto;
+    height:400px;
+}
+
+#ts-diff-indo {
+    width: auto;
+    height: 400px;
+}
+
+#barplot-indo {
+    width:auto;
+    height:400px;
+}
+
+.pretty-graph {
+    border: 5px solid whitesmoke;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+}
+ 
+.right-side {
+    width: 47%;
+    height: auto;
+    margin-top: 20px;
+    float: right;
+    background-color: #21365c;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.right-container {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.right-container > div {
+    padding: 10px;
+    margin-right: 5px;
+    flex: 1;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px "#dae1e7";
+}
+
+.right-container > div > h5 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.right-container > div > h3 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+.right-container > div:nth-child(1) {
+    background-color: #2B37B0;
+}
+
+.right-container > div:nth-child(2) {
+    background-color:#FF2520;
+}
+
+.right-container > div:nth-child(3) {
+    background-color:#17B65C;
+}
+
+.right-container > div:nth-child(4) {
+    background-color:#cecb30;
+}
+
+#ts-province {
+    width: auto;
+    height: 400px;
+}
+
+#ts-diff-province {
+    width: auto;
+    height: 400px;
+}
+
+#ts-percentage-province {
+    width: auto;
+    height: 400px;
+}
