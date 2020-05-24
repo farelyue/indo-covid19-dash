@@ -1,1 +1,1 @@
-web: gunicorn covid19:app
+web: gunicorn -b :$PORT covid19:app
