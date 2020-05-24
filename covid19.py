@@ -226,22 +226,21 @@ def indo_diff(case):
     global covid19
     indo = covid19.groupby('tanggal').sum().reset_index()
     indo = indo.sort_values('tanggal')
-
-    if case == "all":
-
-        def difference(kasus):
-            diff = []
-            for ind in range(len(indo[kasus])):
-                if ind == 0:
-                    diff.append(0)
-                else:
-                    res = indo[kasus].values[ind] - indo[kasus].values[ind-1]
-                    diff.append(res)
-            return diff
+    def difference(kasus):
+        diff = []
+        for ind in range(len(indo[kasus])):
+            if ind == 0:
+                diff.append(0)
+            else:
+                res = indo[kasus].values[ind] - indo[kasus].values[ind-1]
+                diff.append(res)
+        return diff
         
-        indo["diff_konfirmasi"] = difference("konfirmasi")
-        indo["diff_meninggal"] = difference("meninggal")
-        indo["diff_sembuh"] = difference("sembuh")
+    indo["diff_konfirmasi"] = difference("konfirmasi")
+    indo["diff_meninggal"] = difference("meninggal")
+    indo["diff_sembuh"] = difference("sembuh")
+    
+    if case == "all":
 
         cases = ["diff_konfirmasi","diff_meninggal","diff_sembuh"]
         cols = ["#2B37B0", "#FF2520", "#17B65C"]
