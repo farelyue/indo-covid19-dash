@@ -32,7 +32,8 @@ province_options = [{'label':province, 'value':province} for province in provinc
 
 colors = ["#142850", "#27496d", "#00909e", "#dae1e7"]
 
-app = dash.Dash()
+app = dash.Dash(__name__)
+server = app.server
 
 app.layout = html.Div([
     #Header
@@ -564,4 +565,4 @@ def province_percentage(province):
     return fig
 
 if __name__ == "__main__":
-    app.run_server(debug = False)
+    app.run_server(debug = False, port = "8080", host = "0.0.0.0")
